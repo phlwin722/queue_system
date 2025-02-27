@@ -10,3 +10,8 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 }
+
+/* this is a controller  */
+
+
+/* uliy iylyiy ioly */
