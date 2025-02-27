@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Queueing hahatdog
+          Queueing 
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
