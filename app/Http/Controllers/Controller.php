@@ -11,6 +11,7 @@ class Controller extends BaseController
     use AuthorizesRequests, ValidatesRequests;
 
     # Hello DEV Team
+    # Bago to
 
 }
 
