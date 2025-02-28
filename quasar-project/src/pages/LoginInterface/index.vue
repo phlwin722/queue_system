@@ -17,7 +17,7 @@
        :rules="[ val => val && val.length > 0 || 'Please type something',
        ]"
      </q-input>
-
+     
      <q-input 
          v-model="password" 
          filled :type="isPwd ? 'password' : 'text'" 
