@@ -1,6 +1,10 @@
 const routes = [
   {
     path: '/',
+    component: () => import('src/pages/LoginInterface/index.vue') // Ensure this is correct
+  },
+  {
+    path: '/admin',
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') }
