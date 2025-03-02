@@ -85,7 +85,9 @@ module.exports = configure(function (ctx) {
 
     // https://legacy-app.quasar.dev/quasar-cli-webpack-v3/quasar-config-file#framework
     framework: {
-      config: {},
+      config: { 
+        loading : {}
+      },
 
       // iconSet: 'material-icons', // Quasar icon set
       // lang: 'en-US', // Quasar language pack
@@ -100,7 +102,8 @@ module.exports = configure(function (ctx) {
       // Quasar plugins
       plugins: [
         'Notify',
-        'Dialog'
+        'Dialog',
+        'Loading'
       ]
     },
 

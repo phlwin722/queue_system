@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-center">
+  <div class="flex flex-center">
    <div class="q-pa-md" style="max-width: 400px">
     <h2 style="text-center">Login </h2>
    <q-form
@@ -15,8 +15,9 @@
        hint="Email"
        lazy-rules
        :rules="[ val => val && val.length > 0 || 'Please type something',
-       ]"
-     </q-input>
+       ]">
+       </q-input>
+    
      
      <q-input 
          v-model="password" 
@@ -52,13 +53,6 @@
            @click="goAdmin"
            color="primary"
        />
-     <q-btn
-        label="Reset"
-        type="reset"
-        color="primary"
-        flat
-        class="q-ml-sm"
-      />
      </div>
    </q-form>
 
@@ -85,7 +79,7 @@ export default {
     }
 
     const goAdmin = () => {
-      router.push('/admin'); // ✅ Use router instance
+      router.push('/admin/dashboard'); // ✅ Use router instance
     };
   
 
@@ -116,14 +110,6 @@ export default {
        }
      },
  */
-     onReset () {
-       email.value = null
-       password.value = null
-       accept.value = false
-     },
-     registerPage () {
-        this.$router.push('/register')
-     },
    }
  }
 }

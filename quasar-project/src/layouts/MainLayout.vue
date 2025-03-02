@@ -19,12 +19,19 @@
       </q-toolbar>
     </q-header>
 
-  <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+  <q-drawer
+    v-model="leftDrawerOpen"
+    show-if-above
+    bordered>
       <q-list>
-        <q-item-label header> Essential Links </q-item-label>
-
-        <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
-      </q-list>
+        <template v-for="(item, index) in linksList">
+          <q-item clickable v-ripple :to="item.link" exact>
+            <q-item-section avatar>
+              <q-icon :color="item.color" :name="item.icon" />
+            </q-item-section>
+            <q-item-section>{{ item.title }}</q-item-section>
+          </q-item>
+        </template></q-list>
     </q-drawer>
 
     <q-page-container>
@@ -43,10 +50,17 @@ const linksList = [
   {
     title: "Dashboard",
     icon: "dashboard",
+    link: '/admin/dashboard',
+  },
+  {
+    title: "QRcode",
+    icon: "qr_code",
+    link: '/admin/qr_code',
   },
   {
     title: "Logout",
     icon: "logout",
+    link: '/login',
   },
 ];
 
