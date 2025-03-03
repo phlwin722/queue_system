@@ -1,21 +1,16 @@
 <template>
   <div class="flex flex-center">
-   <div class="q-pa-md" style="max-width: 400px">
+   <div class="q-pa-md">
     <h2 style="text-center">Login </h2>
    <q-form
-     @submit="onSubmit"
-     @reset="onReset"
      class="q-gutter-md"
    >
      <q-input
        filled
        v-model="email"
-       label="Email "
-       type="email"
-       hint="Email"
-       lazy-rules
-       :rules="[ val => val && val.length > 0 || 'Please type something',
-       ]">
+       label="Username "
+       type="text"
+       hint="Username">
        </q-input>
     
      
@@ -25,9 +20,6 @@
          hint="Password"
          label="Password"
          lazy-rules
-       :rules="[
-         val => val !== null && val !== '' || 'Please type your password',
-       ]"
          >
          <template v-slot:append>
            <q-icon
@@ -37,19 +29,9 @@
            />
          </template>
      </q-input>
-     <div 
-        class="text-right cursor-pointer"
-        @click="registerPage">
-         Register
-     </div>
-     <q-toggle 
-         v-model="accept" 
-         label="I accept the license and terms" 
-     />
-
      <div>
        <q-btn 
-           label="Submit" 
+           label="Login" 
            @click="goAdmin"
            color="primary"
        />

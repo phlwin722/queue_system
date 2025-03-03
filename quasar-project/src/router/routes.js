@@ -17,6 +17,10 @@ const routes = [
     ]
   },
   {
+    path: '/customer/qr_reader',
+    component: () => import('pages/qr_CodeReader/index.vue') // Ensure the correct path here
+  },
+  {
     path: '/customer/form',
     component: () => import('pages/customer_Interface/index.vue') // Ensure the correct path here
   },
